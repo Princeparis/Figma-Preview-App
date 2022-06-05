@@ -6,7 +6,10 @@
 // then add then to the website
 const apiKey = "figd_ZrfXJpor0Eq8-xiciCu_K86WZjAKLSjtjv3O_N1c"
 const apiHeaders = {
-    "X-Figma-Token": apiKey
+    headers: {
+        "X-Figma-Token": apiKey
+    }
+    
 }
 
 const loadFile = function (key) {
