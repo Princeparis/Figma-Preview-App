@@ -52,10 +52,47 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    z-index: 3;
+    transform: translate(0, 100%);
+    transition: transform 2s, opacity 2s;
+    opacity: 0;
+}
+
+footer.show {
+    transform: translate(0, 0);
+    opacity: 1;
 }
 
 section {
     position: relative;
-    padding: 100px 32px;
     z-index: 2;
+    overflow: hidden;
+    /*display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 16px 16px;*/
+
+}
+
+div.slider {
+    display: flex;
+    height: 100vh;
+    width: fit-content;
+    transition: transform 2s cubic-bezier(0.86, 0, 0.07,1);
+}
+
+div.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+div.slider div {
+    height: 100vh;
+    width: 100vw;
+    padding: 100px 32px;
+    text-align: center;
+}
+
+.loader {
+    width: 40px;
 }
